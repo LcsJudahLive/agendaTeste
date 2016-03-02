@@ -10,12 +10,12 @@ import br.com.caelum.jdbc.ContatoDAO;
 
 public class JDBCInsere {
 
-	public static void main(String[] args) throws SQLException {
+	public static void main(String[] args) throws SQLException, ClassNotFoundException {
 		// TODO Auto-generated method stub
 		
 		// cria um preparedStatement
 		Contato contato = new Contato();
-		contato.setNome("Caelum2");
+		contato.setNome("Caelum3");
 		contato.setEmail("caelum@caelum.com.br");
 		contato.setEndereco("R. Vergueiro 3185 cj57");
 		contato.setDataNascimento(Calendar.getInstance());
