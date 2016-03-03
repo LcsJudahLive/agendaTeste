@@ -41,7 +41,7 @@ public class ContatoDao {
 		}
 		
 	}
-	public List<Contato>getLista(){
+	public List<Contato>getlista(){
 		try {
 			List<Contato> contatos = new ArrayList<Contato>();
 			PreparedStatement stmt = this.connection.prepareStatement("select * from contatos");
