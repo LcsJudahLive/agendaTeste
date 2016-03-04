@@ -16,6 +16,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import br.com.caelum.jdbc.dao.ContatoDao;
 import br.com.caelum.jdbc.modelo.Contato;
+import br.com.caelum.servlet.SocketJson;
 
 @WebServlet("/adicionaContato")
 public class AdicionaContatoServlet extends HttpServlet{
@@ -45,9 +46,12 @@ public class AdicionaContatoServlet extends HttpServlet{
 		contato.setEndereco(endereco);
 		contato.setEmail(email);
 		contato.setDataNascimento(dataNascimento);
-		// salva o contato
+		// salva o contato e joga em JSON
+		SocketJson json = new SocketJson();
+		json.ParsingJson(contato);
 		ContatoDao dao = new ContatoDao();
 		dao.adiciona(contato);
+		
 		RequestDispatcher rd = request.getRequestDispatcher("/contato-adicionado.jsp");
 		rd.forward(request, response);
 	}

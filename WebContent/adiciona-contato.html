@@ -1,13 +1,15 @@
 <html>
+<meta charset="UTF-8">
 	<body>
 		<h1>Adicionar Contato</h1>
 		<hr />
 		<form action="adicionaContato" method="post">
-			Nome: <input type="text" name="nome" /><br />
-			E-mail: <input type="text" name="email" /><br />
-			Endereço: <input type="text" name="endereco" /><br />
-			Data Nascimento: <input type="text" name="dataNascimento" /><br />
+			Nome: <input type="text" name="nome" placeholder="Nome"/><br />
+			E-mail: <input type="text" name="email" placeholder="Email"/><br />
+			Endereço: <input type="text" name="endereco" placeholder="Endereço" /><br />
+			Data Nascimento: <input type="text" name="dataNascimento" placeholder="Data de Nascimento" /><br />
 			<input type="submit" value="Gravar" />
 		</form>
+		<a href="lista-contatos.jsp">Listar Contatos</a>
 	</body>
 </html>
